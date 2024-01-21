@@ -1,4 +1,14 @@
 GIT
+  remote: git@github.com:4tolexx/jekyllBear.git
+  revision: 71a77481a32d34620437e321eef99c821a0ab205
+  branch: dependency-resolution
+  specs:
+    jekyll-bear-theme (0.1.6)
+      jekyll (~> 3.9.4)
+      jekyll-redirect-from (~> 0.16.0)
+      webrick (~> 1.8.0)
+
+GIT
   remote: https://github.com/github/pages-gem.git
   revision: 974872fe73f8ec0b704e48f5c1f150df7a508e01
   branch: master
@@ -290,8 +300,8 @@ PLATFORMS
 DEPENDENCIES
   github-pages!
   http_parser.rb (~> 0.6.0)
+  jekyll-bear-theme!
   jekyll-feed (~> 0.12)
-  minima (~> 2.5)
   tzinfo (>= 1, < 3)
   tzinfo-data
   wdm (~> 0.1.1)

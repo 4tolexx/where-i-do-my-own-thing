@@ -26,12 +26,12 @@ description: >- # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 domain: 4tolexx.github.io
 url: 4tolexx.github.io # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: /where-i-do-my-own-thing/ # the subpath of your site, e.g. /blog
+baseurl:  # the subpath of your site, e.g. /blog
 twitter_username: 4tolexx
 github_username:  4tolexx
 
 # Build settings
-theme: minima
+# theme: jekyll-bear-theme
 plugins:
   - jekyll-feed
 
@@ -54,3 +54,45 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+compress_html:
+  clippings: all
+  comments: [""]
+  endings: [html, head, body, li, dt, dd, rt, rp, optgroup, option, colgroup, caption, thead, tbody, tfoot, tr, td, th]
+  profile: false
+  blanklines: false
+  ignore:
+    envs: []
+
+# sass:
+#   sass_dir: css
+#   style:    compressed
+
+collections:
+  my_tags:
+    output: true
+    permalink: /tagged/:slug/
+defaults:
+  -
+    scope:
+      path: ""
+      type: my_tags
+    values:
+      layout: tagged
+
+# baseurl: ""
+permalink: /blog/:slug
+timezone: America/New_York
+future: false
+
+exclude:
+- README.md
+- LICENSE.md
+
+exclude: [vendor]
+
+Blog: /blog
+
+# Add general links to site pages here
+links:
+  Resume: /assets/Resume.pdf
